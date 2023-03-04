@@ -1,0 +1,300 @@
+/* font-family: 'Bellota Text', cursive;
+font-family: 'IBM Plex Serif', serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a {text-decoration: none;}
+
+/* Pseudoclases para los enlaces de la barra de navegación, todos los elementos no visitados */
+
+a:link{
+    color: black;
+}
+
+/* Pseudoclases para los enlaces de la barra de navegación, todos los elementos visitados */
+a:active{
+  color: rgb(56, 53, 53);
+
+}
+
+body footer div ul li a {
+    list-style: none;
+    font-family: 'IBM Plex Serif', serif;
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* separacion entre footer y contenido */
+body footer{
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.titulos{
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 22px;
+    font-weight: bold;
+    font-style: normal;
+    margin-top: 100px;
+    margin-bottom: 10px;  
+}
+
+.parrafos {
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    margin-top: 10px;
+}    
+
+/* seccion quienes somos */
+.quien{
+    position: relative;
+    margin-left: 50%;
+    
+}
+
+/* valores esteticos de items de contacto */
+.contact{
+    font-family: 'IBM Plex Serif', serif;
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.centrar {text-align: center;}
+
+/* Párrafos de html biografía */
+div main p{
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    text-align: center;
+}
+
+/* Ítems html contacto */
+header div main ul li i {
+    list-style: none;
+    color: black;
+    font-family: 'IBM Plex Serif', serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    
+}
+
+/* Barras de navegación */
+body header nav ul li a {
+    list-style: none;
+    font-family: 'IBM Plex Serif', serif;
+    color: black;
+    font-size: 20px;
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+/* logo de las barras */
+.logo{
+    margin-left: 30px;
+    padding-left: 30px;
+}
+
+/* pagina politica - creacion espacio en blanco hasta el footer */
+.espacio{
+    margin-bottom: 500px;
+}
+
+/* separacion entre items de contacto */
+div main ul li i{
+    margin-bottom: 20px;
+    margin-top: 20px;
+    margin-right: 50px;
+}
+
+/* separacion entre elementos y titulos en paginas obras destacadas, entrevistas y curiosidades */
+body div main h2{
+    margin-bottom: 50px;
+}
+
+/* separacion entre elementos y titulos en pagina contacto */
+body div main h1{
+    margin-bottom: 50px;
+}
+
+/* Propiedades para los hijos de las barras */
+ul li a {
+    padding: 10px;
+    border-style: none;
+}
+
+footer div ul li a {
+    padding: 10px;
+    border-style: none;
+}
+
+/* A partir de acá empieza Flexbox */
+
+/* Flexbox para barras de navegación y logo */
+
+.barras {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    align-content:  flex-end;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 50px;
+
+}
+
+.barras-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    align-content:  flex-start;
+    justify-content: flex-start;
+    list-style: none;
+}
+
+/* Imagen con frase home */
+.frase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    padding: 50px;
+    margin: 50px;
+}
+
+/* Bloque quienes somos y video en pagina home */
+.info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-area: "quienes videohome";
+    margin-right: 20px;
+}
+
+article {
+    grid-area: quienes; 
+}
+
+div {
+    grid-area: videohome;
+}
+
+.homev {
+    margin-left: 20px;
+}
+
+/* pagina biografia - parrafos e imagen y parrafo de politica */
+body div main p {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    margin: 50px;
+}
+
+.fotosepiabio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+/* paginas obras destacadas, entrevistas y curiosidades */
+body div main section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+    
+/* lista de contacto */
+.redes{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-left: 100px;
+    list-style-type: none;
+}
+
+/* Estilos mobile para dos paginas elegidas que son biografia y curiosidades */
+@media screen and (max-width:576px){
+    .curiosidades {
+        grid-template-columns: 0.2fr 2fr;
+        grid-template-rows: 1fr 1fr;
+        grid-area: "header" "header"
+                    "nav main";
+    }
+}
+
+header {
+    grid-area: logo;
+}
+
+nav {
+    grid-area: barranav;
+}
+
+main {
+    grid-area: videos;   
+}
+
+
+@media screen and (max-width:576px) {
+    .biografia {
+            grid-template-columns: 0.2fr 2fr;
+            grid-template-rows: 1fr 1fr;       
+            grid-area: "header" "header"
+                        "nav main"
+                        "main" "main"
+                        "div div"
+                        "main main";
+    }
+}
+
+      header{
+        grid-area: logo;
+      }
+
+     nav{
+        grid-area: barranav;
+     }
+
+     main {
+        grid-area: parrafo;
+     }
+      
+     div{
+        grid-area: imag;
+     }
+
+     main {
+        grid-area: segundoparrafo;
+     }
+
+     /* Acá termina estilos mobile */
+
+     
+
+     
+    
