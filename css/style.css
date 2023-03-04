@@ -242,12 +242,12 @@ body div main section{
     .curiosidades {
         grid-template-columns: 0.2fr 2fr;
         grid-template-rows: 1fr 1fr;
-        grid-area: "header" "header"
+        grid-area: "div" "div"
                     "nav main";
     }
 }
 
-header {
+div {
     grid-area: logo;
 }
 
@@ -264,7 +264,7 @@ main {
     .biografia {
             grid-template-columns: 0.2fr 2fr;
             grid-template-rows: 1fr 1fr;       
-            grid-area: "header" "header"
+            grid-area: "div" "div"
                         "nav main"
                         "main" "main"
                         "div div"
@@ -272,7 +272,7 @@ main {
     }
 }
 
-      header{
+      div{
         grid-area: logo;
       }
 
