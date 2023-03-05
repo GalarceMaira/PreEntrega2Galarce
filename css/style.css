@@ -294,7 +294,68 @@ main {
 
      /* Acá termina estilos mobile */
 
-     
-
-     
+     /* Estilos desktop para dos paginas elegidas que son biografia y curiosidades */
     
+     @media screen and (max-width:1200px)  {
+        .curiosipage {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 1fr 1fr;
+            grid-area: "div" "div"
+                        "nav" "nav"
+                        "main" "main"
+                        "div" "div";
+        }
+     }
+
+     div{
+        grid-area: logopage;
+     }
+
+     nav {
+        grid-area: barra;
+     }
+
+     main{
+        grid-area: curiovid;
+     }
+
+     div {
+        grid-area: footercurio;
+     }
+
+     @media screen and (max-width:1200px) {
+        .biograpage {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            grid-area: "div" "div"
+                       "nav" "nav"
+                       "main" "main"
+                       "div" "div"
+                       "main" "main"
+                       "div" "div";
+        }
+     }
+        
+     div {
+        grid-area: logobio;
+     }
+     
+     nav {
+        grid-area: barrabio;
+     }
+     
+     main {
+        grid-area: parrafbio;
+     }
+     
+     div {
+        grid-area: imagbio;
+     }
+
+     main {
+        grid-area: segundoparr;
+     }
+
+     div {
+        grid-area: footer;
+     }
